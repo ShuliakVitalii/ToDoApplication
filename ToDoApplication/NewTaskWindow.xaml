@@ -1,0 +1,30 @@
+﻿<Window x:Class="ToDoApplication.NewTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoApplication"
+        mc:Ignorable="d"
+        Title="New task" Height="350" Width="300">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/fon.webp"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Margin="12,0,12,12">
+            <Button x:Name="CancelButton" Content="Cancel" Margin="100,0,100,8" Click="CancelButton_Click" Background="#FFE05521"/>
+            <Button x:Name="SaveButton" Content="Save" Margin="100,0,100,0" Click="SaveButton_Click" Background="#FF5BF109"/>
+        </StackPanel>
+        <StackPanel Margin="12,12,12,12">
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,4" Text="Name of the task:" OpacityMask="#FFA22E2E"/>
+            <TextBox x:Name="NameTextBox" TextWrapping="Wrap" Width="200" HorizontalAlignment="Left" Margin="0,0,0,8" Background="{x:Null}" BorderBrush="White"/>
+            <CheckBox x:Name="IsCompletedCheckBox" Content="Task completed" Checked="IsCompletedCheckBox_Checked" Margin="0,0,0,8" Background="{x:Null}" BorderBrush="White" OpacityMask="White"/>
+            <TextBlock TextWrapping="Wrap" Text="Short description:" Margin="0,0,0,4"/>
+            <TextBox x:Name="DescriptionTextBox" TextWrapping="Wrap" Width="200" HorizontalAlignment="Left" AcceptsReturn="True" Height="123" Background="{x:Null}" BorderBrush="White"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

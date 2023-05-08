@@ -1,0 +1,36 @@
+﻿<Window x:Class="ToDoApplication.NamesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoApplication"
+        mc:Ignorable="d"
+        Title="NamesWindow" Height="200" Width="300">
+    <Window.Background>
+        <ImageBrush ImageSource="fon.webp"/>
+    </Window.Background>
+    <Grid Margin="10">
+
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        <Label>Names</Label>
+        <ListBox Grid.Row="1" x:Name="lstNames" Background="{x:Null}" Foreground="White" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <TextBox x:Name="txtName" Background="{x:Null}" Foreground="White" />
+            <Button x:Name="AddButton" Content="Add" Margin="30,10,30,10" Padding="8,1,8,1" Click="ButtonAddName_Click" Background="#FFE5EA96" BorderBrush="Black" Cursor="Arrow">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+    </Grid>
+    
+</Window>
